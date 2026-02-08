@@ -16,7 +16,6 @@ public class MiddleElement {
         while(fast<list.size() && fast+1<list.size()){
             slow++;
             fast+=2;
-
         }
         System.out.println("middle element is : "+list.get(slow));
     }
