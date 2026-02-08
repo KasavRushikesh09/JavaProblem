@@ -7,6 +7,8 @@ public class Practice{
         list.add(30);
         list.addFirst(5);
         list.addLast(50);
+        list.size(2);
         System.out.println(list);
+
     }
 }
