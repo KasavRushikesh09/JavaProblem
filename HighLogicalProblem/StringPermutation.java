@@ -6,8 +6,11 @@ public class StringPermutation{
             System.out.println(arr);
             return;
         }
-
+        Set<Character> used = new HashSet<>();
         for(int i=fi;i<arr.length;i++){
+
+            if(used.contains(arr[i])) continue;
+            used.add(arr[i]);
             swap(arr,i,fi);
             Permutations(arr,fi+1);
             swap(arr,i,fi);
