@@ -1,25 +1,24 @@
 import java.util.*;
-public class MaxAquaCurtains{
+
+public class MaxAquaCurtains {
     public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        String s = sc.next();
-        int l = sc.nextInt();
-        int count =0;
-        for(int i=0;i<l;i++){
-            if(s.charAt(i) == 'a'){
-                count++;
+        Scanner sc  = new Scanner(System.in);
+            String s = sc.next();
+            int n = sc.nextInt();
+            int maxCount =0;
+            //transver the string
+        for(int i=0;i<s.length();i+=n){
+            int count = 0;
+            //count the current a
+            for(int j=i;j<i+n&&j<s.length();j++){
+                if(s.charAt(j) == 'a'){
+                    count++;
+                }
+            }
+            if(count>maxCount){
+                maxCount= count;
             }
         }
-        int maxCount = count;
-        for(int i=l;i<s.length();i++){
-            if(s.charAt(i-l) == 'a'){
-                count--;
-            }
-            if(s.charAt(i) == 'a'){
-                count++;
-            }
-            maxCount = Math.max(maxCount,count);
-        }
-        System.out.print(maxCount);
+        System.out.println(maxCount);
     }
 }
