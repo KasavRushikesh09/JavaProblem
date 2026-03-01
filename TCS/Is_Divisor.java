@@ -13,11 +13,10 @@ public class Is_Divisor {
 
     public static void main(String[] args){
         Scanner sc = new  Scanner(System.in);
-        int num = 28;
+        int num = 5;
         int sum = 0;
         for(int i=1;i<=num/2;i++){
             if(isDivisors(num,i)){
-//                System.out.print(i+" ");
                 sum= sum+i;
             }
         }
@@ -27,8 +26,5 @@ public class Is_Divisor {
         else{
             System.out.print("No");
         }
-
-
-
     }
 }
